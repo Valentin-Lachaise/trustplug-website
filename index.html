@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustPlug: Tiny plugins. Serious impact.</title>
+<meta name="description" content="TrustPlug makes purpose-built, no-code plugins for Framer. Each one nails a single job. Presentation page of the business and its plugins.">
+<style>
+  :root {
+    --bg: #faf9ff;
+    --card: #ffffff;
+    --ink: #1c1740;
+    --muted: #5d5a7a;
+    --line: #e4e0f5;
+    --accent: #7c3aed;
+    --accent-soft: #efe9ff;
+    --ok: #0f7a4d;
+    --ok-soft: #dcf6e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12102a;
+      --card: #1b1840;
+      --ink: #f1efff;
+      --muted: #b2aed6;
+      --line: #2f2b5e;
+      --accent: #a78bfa;
+      --accent-soft: #2a2358;
+      --ok: #6ee7b0;
+      --ok-soft: #153a2c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header.top {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  nav a { margin-left: 18px; font-size: .92rem; color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  .hero { text-align: center; padding: 84px 0 56px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 700; color: var(--accent); }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin: 14px 0 18px; letter-spacing: -0.02em; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { max-width: 640px; margin: 0 auto; color: var(--muted); font-size: 1.1rem; }
+  .btns { margin-top: 28px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--card); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn.primary { color: #12102a; } }
+  .stats { display: flex; justify-content: center; gap: 48px; margin-top: 48px; flex-wrap: wrap; }
+  .stats b { display: block; font-size: 2rem; color: var(--accent); }
+  .stats span { color: var(--muted); font-size: .9rem; }
+  section { padding: 56px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.8rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 28px; max-width: 640px; }
+  .cat { margin: 34px 0 12px; font-size: 1.05rem; border-left: 4px solid var(--accent); padding-left: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .tag { font-size: .72rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--ok-soft); color: var(--ok); white-space: nowrap; }
+  .plans .card h3 { color: var(--accent); }
+  ul.points { padding-left: 20px; color: var(--muted); }
+  ul.points li { margin: 6px 0; }
+  .contact a { font-weight: 600; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--muted); font-size: .9rem; text-align: center; }
+  @media (max-width: 640px) { nav { display: none; } .hero { padding-top: 56px; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Trust<span>Plug</span></a>
+    <nav>
+      <a href="#plugins">Plugins</a>
+      <a href="#promise">Why us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div class="eyebrow">Framer plugins</div>
+      <h1>Tiny plugins. <em>Serious impact.</em></h1>
+      <p class="lead">Purpose-built, no-code plugins for Framer. Each one nails a single job: add it in one click, skip the API keys, skip the upkeep.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://trustplug.net/">Visit trustplug.net</a>
+        <a class="btn" href="#plugins">See the plugins</a>
+      </div>
+      <div class="stats">
+        <div><b>10</b><span>plugins in the works</span></div>
+        <div><b>0</b><span>API keys required</span></div>
+        <div><b>785</b><span>settings, all yours to change</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="plugins">
+    <div class="wrap">
+      <h2>The plugins</h2>
+      <p class="sub">Grouped by what they solve on a website. All ten are currently in development.</p>
+
+      <h3 class="cat">Trust signals</h3>
+      <div class="grid">
+        <div class="card"><h3>Testimonials <span class="tag">In development</span></h3><p>Turns Google reviews into widgets that match your site, with 23 layouts. No API key needed.</p></div>
+        <div class="card"><h3>Gallery for Instagram <span class="tag">In development</span></h3><p>Shows the latest posts of any public Instagram account in a grid, with a built-in lightbox.</p></div>
+      </div>
+
+      <h3 class="cat">Visitor access &amp; flow</h3>
+      <div class="grid">
+        <div class="card"><h3>Gatekeeper <span class="tag">In development</span></h3><p>Allows or blocks visitors by country, and detects VPN and proxy traffic.</p></div>
+        <div class="card"><h3>Pathfinder <span class="tag">In development</span></h3><p>Redirects visitors by country, language or device, or suggests a page with a banner.</p></div>
+      </div>
+
+      <h3 class="cat">Local business</h3>
+      <div class="grid">
+        <div class="card"><h3>Landmark <span class="tag">In development</span></h3><p>Embeds an interactive Google Map with directions.</p></div>
+        <div class="card"><h3>Open Hours <span class="tag">In development</span></h3><p>Shows whether the business is open, from hours typed in or synced from a calendar or Google listing.</p></div>
+      </div>
+
+      <h3 class="cat">Visitor engagement</h3>
+      <div class="grid">
+        <div class="card"><h3>Feedback <span class="tag">In development</span></h3><p>Collects ratings, problems and ideas, and sends them to Slack, Discord, Teams or a spreadsheet.</p></div>
+        <div class="card"><h3>FAQ <span class="tag">In development</span></h3><p>A searchable list of questions and answers.</p></div>
+      </div>
+
+      <h3 class="cat">Site state, privacy &amp; consent</h3>
+      <div class="grid">
+        <div class="card"><h3>Standby Mode <span class="tag">In development</span></h3><p>Shows a maintenance page with a countdown while the team still sees the live site.</p></div>
+        <div class="card"><h3>Cookie Consent <span class="tag">In development</span></h3><p>Blocks trackers until a visitor accepts, and deletes refused cookies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="promise">
+    <div class="wrap">
+      <h2>Why TrustPlug</h2>
+      <ul class="points">
+        <li>Sensitive credentials stay on TrustPlug's servers, never on the published site.</li>
+        <li>Plugins work right after installation; settings are optional.</li>
+        <li>Styling adapts to the site's colours, fonts and spacing.</li>
+        <li>Every setting can be changed from a panel, without code.</li>
+        <li>A free plan that never expires, with lower limits and fewer layouts.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap plans">
+      <h2>Pricing</h2>
+      <p class="sub">Pay for the plugin you need, nothing else. Prices are indicative and will be confirmed before launch; see <a href="https://trustplug.net/pricing">trustplug.net/pricing</a>.</p>
+      <div class="grid">
+        <div class="card"><h3>Free</h3><p>A real plan, not a trial. It never expires and works on a live site, with lower limits and fewer layouts.</p></div>
+        <div class="card"><h3>Starter</h3><p>Every layout and option, on one site. Billed monthly, or yearly with two months free.</p></div>
+        <div class="card"><h3>Pro</h3><p>The same options on up to five sites, with priority support and early access to new features.</p></div>
+        <div class="card"><h3>Lifetime</h3><p>Pro for good, paid once: up to five sites and every future update included.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <h2>Contact &amp; links</h2>
+      <p class="sub">TrustPlug is founded by Valentin Lachaise, engineering student at IMT Atlantique.</p>
+      <ul class="points">
+        <li>Website: <a href="https://trustplug.net/">trustplug.net</a></li>
+        <li>Email: <a href="mailto:contact@trustplug.net">contact@trustplug.net</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/trustplug.plugins/">@trustplug.plugins</a></li>
+        <li>X: <a href="https://x.com/_TrustPlug_">@_TrustPlug_</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 TrustPlug &middot; Presentation page; the product site is <a href="https://trustplug.net/">trustplug.net</a>.</div>
+</footer>
+
+</body>
+</html>
